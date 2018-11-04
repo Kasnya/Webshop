@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/login', 'Auth\LoginController@login')->name('login');
+Route::get('/signup', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::get('/category', 'Controller@category')->name('category');
