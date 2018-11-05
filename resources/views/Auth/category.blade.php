@@ -4,15 +4,32 @@
 
    
 
-<div class="row">
-        <div class="col-md-5 mx-auto">
+
+        <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Kategoria név</th>
+     
+    </tr>
         @foreach ($kat_nev as $users) 
+
+<table class="table table-striped table-dark">
+  
+  <tbody>
+    <tr>
+      <th scope="row">{{$users->kat_id}}</th>
+      <th>{{$users->kat_nev}}</th>
+      
+    </tr>
+   
+  </tbody>
+</table>
+
        
-        print $kat_nev,
-        
     @endforeach
-        </div>
-    </div>
+     
 
 
 @stop
+

@@ -16,7 +16,10 @@ class Controller extends BaseController
     public function category()
     {
         $users = DB::select('select * from kategoriak ', [2]);
-
+        
+  
+       
+ 
         return view('Auth/category', ['kat_nev' => $users]);
     }
 }

@@ -20,6 +20,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">Signin</a>
                 </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="{{ route('category') }}">Kategoriak <span class="sr-only">(current)</span></a>  
+            </li>
             @endauth
         </ul>
         <form class="form-inline my-2 my-lg-0">
