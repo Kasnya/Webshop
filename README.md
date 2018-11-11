@@ -7,3 +7,7 @@ A következő funkciók vannak tervben:
 - Kategóriák
 - Kosár
 - Rendelés leadása
+
+Adatbázis migráció:
+1. Hozz létre egy webshop nevezetű adatbázist
+2.     php artisan migrate --seed
