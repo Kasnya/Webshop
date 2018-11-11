@@ -8,6 +8,6 @@ A következő funkciók vannak tervben:
 - Kosár
 - Rendelés leadása
 
-Adatbázis migráció:
-1. Hozz létre egy webshop nevezetű adatbázist
+### Adatbázis migráció:
+1. Hozz létre egy **webshop** nevezetű adatbázist
 2.     php artisan migrate --seed
