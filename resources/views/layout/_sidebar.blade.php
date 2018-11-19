@@ -56,7 +56,6 @@
         
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <?php $kat_nev = DB::select('select * from kategoriak '); ?>
             @foreach ($kat_nev as $users)
                 <a href="#">{{$users->kat_nev}}</a>
             @endforeach
@@ -64,7 +63,7 @@
         </div>
         
         <div id="main">  
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Kategóriák</span>
         </div>
         
         <script>

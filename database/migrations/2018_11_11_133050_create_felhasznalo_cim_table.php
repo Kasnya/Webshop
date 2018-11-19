@@ -21,6 +21,8 @@ class CreateFelhasznaloCimTable extends Migration
             $table->integer('hazszam');
             $table->integer('emelet')->nullable();
             $table->integer('ajtoszam')->nullable();
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 

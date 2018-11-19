@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -39,5 +41,22 @@ class LoginController extends Controller
 
     public function login() {
         return view('auth.login');
+    }
+
+    public function authenticate(Request $request)
+    {
+       
+        if (Auth::attempt($request->all(['email','password'])))
+        {
+            return redirect()->intended();
+        }
+        return back()->with(['error' => 'Nincs ilyen felhasználó']);
+    }
+
+    public function logout()
+    {
+
+        Auth::logout();
+        return redirect()->route('home');
     }
 }

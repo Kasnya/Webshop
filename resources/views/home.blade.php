@@ -1,11 +1,11 @@
 @extends('layout.master')
 
 @section('content')
-    @auth
-        Hello, {{ Auth::user()->firstname }}!
-    @else
-        Hello, vendég!
-    @endauth
+@auth
+Hello, {{ \Auth::user()->email }}!
+@else
+Hello, vendég!
+@endauth
 
     <div class="row">
         <div class="col-md-5 mx-auto">

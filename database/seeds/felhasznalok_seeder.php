@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\User;
 class felhasznalok_seeder extends Seeder
 {
     /**
@@ -11,9 +11,9 @@ class felhasznalok_seeder extends Seeder
      */
     public function run()
     {
-        DB::table('felhasznalok')->insert([
+        User::create([
             "email" => "teszt@teszt.teszt",
-            "jelszo" => Hash::make('teszt'),
+            "password" => Hash::make('teszt'),
             "vez_nev" => "Teszt",
             "ker_nev" => "User"
         ]);

@@ -3,19 +3,15 @@
 
 @section('content')
 
+@foreach ($errors->all() as $error)
+    <p>{{ $error }}</p>
+@endforeach
 
     <div class="register">
         <form method="post" action="{{ route('register') }}">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <div class="form-group">
-                <label>username</label>
-                <input class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" type="text" name="username" value="{{ old('username') }}">
-                @if ($errors->has('username'))
-                    @foreach ($errors->get('username') as $error)
-                        <p class="invalid-feedback">{{ $error }}</p>
-                    @endforeach
-                @endif
-            </div>
+           
+               
             <div class="form-group">
                 <label>firstname</label>
                 <input class="form-control{{ $errors->has('firstname') ? ' is-invalid' : '' }}" type="text" name="firstname" value="{{ old('firstname') }}">
@@ -56,6 +52,39 @@
                 <label>password confirmation</label>
                 <input class="form-control" type="password" name="password_confirmation">
             </div>
+
+            <div class="form-group">
+                <label>Irányító szám</label>
+                <input class="form-control" type="text" name="address[irszam]">
+            </div>
+
+            <div class="form-group">
+                <label>Város</label>
+                <input class="form-control" type="text" name="address[varos]">
+            </div>
+
+            <div class="form-group">
+                <label>Utca</label>
+                <input class="form-control" type="text" name="address[utca]">
+            </div>
+
+            <div class="form-group">
+                <label>Házszám</label>
+                <input class="form-control" type="text" name="address[hazszam]">
+            </div>
+
+            <div class="form-group">
+                <label>Emelet</label>
+                <input class="form-control" type="text" name="address[emelet]">
+            </div>
+
+            <div class="form-group">
+                <label>Ajtó szám</label>
+                <input class="form-control" type="text" name="address[ajto_szam]">
+            </div>
+            
+
+            
             <div class="form-group text-right">
                 <input class="btn btn-primary" type="submit" value="register">
             </div>

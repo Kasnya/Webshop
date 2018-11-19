@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use Schema;
+use View;
 use Illuminate\Support\ServiceProvider;
+use App\Http\ViewComposers\FrontViewComposer;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +16,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
+
+        View::composer(
+            '*', FrontViewComposer::class
+        );
     }
 
     /**

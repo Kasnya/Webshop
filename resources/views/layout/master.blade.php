@@ -11,6 +11,7 @@
 <body style="padding-top: 5rem;">
     @include('layout._header')
     @include('layout._sidebar')
+    @include('layout.alerts._error')
     
     <main role="main" class="container">
         
