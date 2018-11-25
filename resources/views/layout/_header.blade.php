@@ -13,6 +13,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('logout') }}">Signout</a>
                 </li>
+                <li class="nav-item">
+                <div  > {{ Auth::user()->vez_nev}} {{ Auth::user()->ker_nev }}</div>
+                </li>
             @else
                 <li class="nav-item">
                     <a class="nav-link" href="signup">Signup</a>
@@ -20,14 +23,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">Signin</a>
                 </li>
-                <li class="nav-item active">
-                <a class="nav-link" href="{{ route('category') }}">Kategoriak <span class="sr-only">(current)</span></a>  
-            </li>
+              
             @endauth
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      
         </form>
     </div>
 </nav>
