@@ -14,7 +14,7 @@ class CreateTermekekTable extends Migration
     public function up()
     {
         Schema::create('termekek', function (Blueprint $table) {
-            $table->increments('termek_id');
+            $table->increments('id');
             $table->string('termek_nev');
             $table->integer('kat_id');
             $table->integer('mennyiseg');

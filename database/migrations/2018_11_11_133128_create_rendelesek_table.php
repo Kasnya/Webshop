@@ -14,7 +14,7 @@ class CreateRendelesekTable extends Migration
     public function up()
     {
         Schema::create('rendelesek', function (Blueprint $table) {
-            $table->increments('rendeles_id');
+            $table->increments('id');
             $table->integer('user_id');
             $table->timestamp('rendelesi_datum');
             $table->integer('szallitasi_koltseg');

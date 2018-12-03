@@ -14,8 +14,12 @@
                     <a class="nav-link" href="{{ route('logout') }}">Signout</a>
                 </li>
                 <li class="nav-item">
-                <div  > {{ Auth::user()->vez_nev}} {{ Auth::user()->ker_nev }}</div>
+                <span class="nav-link" > {{ Auth::user()->vez_nev}} {{ Auth::user()->ker_nev }}</span>
                 </li>
+
+                <li class="nav-item">
+                        <a class="nav-link" href="{{ route('cart.index') }}">Kosár({{Cart::count()}})</a>
+                    </li>
             @else
                 <li class="nav-item">
                     <a class="nav-link" href="signup">Signup</a>

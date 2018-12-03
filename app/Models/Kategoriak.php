@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kategoriak extends Model
 {
-    protected $table ='felhasznalo_cim';
+    protected $table ='kategoriak';
 
     protected $fillable=[
         'kat_nev'
@@ -17,7 +17,7 @@ class Kategoriak extends Model
     ];
     
     public function termekek(){
-        return $this->hasMany(Termekek::class,'termek_id');
+        return $this->hasMany(Termekek::class,'id');
     }
 
     

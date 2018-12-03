@@ -14,6 +14,7 @@ class CreateFelhasznaloCimTable extends Migration
     public function up()
     {
         Schema::create('felhasznalo_cim', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('user_id');
             $table->integer('irszam');
             $table->string('varos');

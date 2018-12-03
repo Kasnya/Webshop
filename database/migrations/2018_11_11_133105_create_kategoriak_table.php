@@ -14,7 +14,7 @@ class CreateKategoriakTable extends Migration
     public function up()
     {
         Schema::create('kategoriak', function (Blueprint $table) {
-            $table->increments('kat_id');
+            $table->increments('id');
             $table->string('kat_nev');
         });
     }
