@@ -56,8 +56,9 @@
         
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="/termekek">Minden kategória</a>
             @foreach ($kat_nev as $users)
-                <a href="#">{{$users->kat_nev}}</a>
+                <a href="/termekek/{{$users->id}}">{{$users->kat_nev}}</a>
             @endforeach
           
         </div>

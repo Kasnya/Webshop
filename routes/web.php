@@ -22,3 +22,5 @@ Route::get('/signout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/kosarba/{termek}','CartController@add')->name('cart.add');
 Route::get('/kosar','CartController@index')->name('cart.index');
 Route::get('/kosar-urites','CartController@clear')->name('cart.clear');
+Route::get('/termekek','ProductController@list_all');
+Route::get('/termekek/{kat_id}','ProductController@list');
