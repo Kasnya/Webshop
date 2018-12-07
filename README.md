@@ -13,5 +13,5 @@ A következő funkciók vannak tervben:
 2.     copy .env.example .env
 3.     php artisan key:generate 
 4. Hozz létre egy **webshop** nevezetű adatbázist
-5. Add meg a .env fájlban az adatbázis adatait (felhasználónév, jelszó, adatbázis név(**DB_DATABASE=webshop**))
+5. Add meg a .env fájlban az adatbázis adatait (felhasználónév, jelszó, adatbázis név(**DB_DATABASE=webshop**)
 6.     php artisan migrate --seed
