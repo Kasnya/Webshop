@@ -15,21 +15,22 @@ class VeglegesitesController extends Controller
 {
     public function finally()
     {
+        $rendelesi_datum = Carbon::now();
+
         $rendeles= Rendelesek::create([
             'user_id' => Auth::user()->id,
-            'rendelesi_datum' =>Carbon::now(),
-            'szallitasi_koltseg' =>Cart::total(),
-            'statusz'=>'ok',
-            
-
-
+            'rendelesi_datum' => $rendelesi_datum,
+            'szallitasi_koltseg' => Cart::total(),
+            'statusz'=>'ok'
         ]);
+        
+        $rendeles_id = DB::table('rendelesek')->select('id')->where('user_id', '=', Auth::user()->id)->where('rendelesi_datum', '=', $rendelesi_datum)->value('id');
         
         
         foreach (Cart::content() as $termek=>$value)
         {
             RendeltTermekek::create([
-                'rendeles_id'=>'1',
+                'rendeles_id'=>$rendeles_id,
                 'termek_id'=>$value->id,
                 'mennyiseg'=>$value->qty,
                 'ar'=>$value->price
