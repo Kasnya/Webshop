@@ -18,6 +18,7 @@ class CreateRendeltCuccokTable extends Migration
             $table->integer('termek_id');
             $table->integer('mennyiseg');
             $table->integer('ar');
+            $table->timestamps();
         });
     }
 

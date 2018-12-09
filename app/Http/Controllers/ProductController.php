@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
     public function list_all()
     {
-        $products = DB::select('select * from termekek');
+        $products = Termekek::all();
  
         return view('product/list', ['products' => $products]);
     }

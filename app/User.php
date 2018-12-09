@@ -32,6 +32,6 @@ class User extends Authenticatable
     
 
     public function cimek(){
-        return $this->hasMany(FelhasznaloCim::class,'user_id');
+        return $this->hasOne(FelhasznaloCim::class,'user_id');
     }
 }

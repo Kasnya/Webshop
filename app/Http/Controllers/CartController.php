@@ -7,11 +7,17 @@ use App\Models\Termekek;
 class CartController extends Controller
 {
 
-    public function add(Termekek $termek) {
-       $item = Cart::add($termek, 1);
+    public function add(Termekek $termek,Int $db) {
+       $item = Cart::add($termek, $db);
        Cart::setTax($item->rowId, $termek->afa_kulcs);
         return back();
     }
+
+    public function addd(Termekek $termek) {
+        $item = Cart::add($termek,1);
+        Cart::setTax($item->rowId, $termek->afa_kulcs);
+         return back();
+     }
 
     public function index()
     {
@@ -22,5 +28,13 @@ class CartController extends Controller
     {
         Cart::destroy();
         return redirect()->route("cart.index");
+    }
+
+    public function remove(Cart $rowId)
+    {
+        dd($rowId);
+        Cart::remove($rowId);
+        return redirect()->route("cart.index");
+
     }
 }

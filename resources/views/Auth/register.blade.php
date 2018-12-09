@@ -80,7 +80,7 @@
 
             <div class="form-group">
                 <label>Ajtó szám</label>
-                <input class="form-control" type="text" name="address[ajto_szam]">
+                <input class="form-control" type="text" name="address[ajtoszam]">
             </div>
             
 

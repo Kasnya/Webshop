@@ -8,8 +8,9 @@
         <tr>
             <th>Név</th>
             <th>Egység ár</th>
-            <th>Darabszám</th>
-            <th>Ár</th>
+            <th class="text-center">Darabszám</th>
+            <th class="text-center">Ár</th>
+            <th class="text-center" >Törlés</th>
             
         </tr>
     </thead>
@@ -18,18 +19,22 @@
             <tr>
                 <td>{{ $termek->name }}</td>
                 <td>{{ $termek->price }} HUF</td>
-                <td>{{ $termek->qty }}</td>
-                <td class="text-right">{{ $termek->price * $termek->qty }} HUF</td>
+                <td class="text-center" >{{ $termek->qty }}</td>
+                <td class="text-center">{{ $termek->price * $termek->qty }} HUF</td>
+             
+             <td class="text-center" ><a  href="{{route('cart.sorclear','Cart::get($termek->rowId)')}}">x</a></td>
             </tr>
         @empty
             <tr>
-                <td colspan="4">A kosár tartalam üres</td>
+                <td colspan="5">A kosár tartalam üres</td>
             </tr>
         @endforelse
         <tr>
-            <td colspan="3">Összesen</td>
+            <td colspan="4">Összesen</td>
             <td class="text-right">{{Cart::total()}} HUF</td>
         </tr>
     </tbody>
 </table>
+
+<a class="btn btn-primary float-right " href="{{route('final')}}">Véglegesítés </a>
 @stop

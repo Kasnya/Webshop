@@ -17,8 +17,9 @@ class CreateRendelesekTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->timestamp('rendelesi_datum');
-            $table->integer('szallitasi_koltseg');
-            $table->string('statusz');
+            $table->string('szallitasi_koltseg');
+            $table->string('statusz')->default('feldolgozas alatt');;
+            $table->timestamps();
         });
     }
 
