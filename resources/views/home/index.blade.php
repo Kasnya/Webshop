@@ -6,6 +6,9 @@
 
      @auth
         <p> Üdvözöllek a webshopunkban </p>
+        @if($errors->any())
+        <div class="alert alert-info">{{$errors->first()}}</div>
+@endif
 
       @else
 

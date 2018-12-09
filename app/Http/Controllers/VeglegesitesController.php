@@ -43,7 +43,8 @@ class VeglegesitesController extends Controller
         
         
         Cart::destroy();
-        return redirect()->route('home');
+        return redirect()->route('home')->withErrors(['Sikeres Vásárlás', 'Sikeres vásárlás']);
+      
     }
 }
     
