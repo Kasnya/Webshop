@@ -13,7 +13,7 @@
            
                
             <div class="form-group">
-                <label>firstname</label>
+                <label>Keresztnév</label>
                 <input class="form-control{{ $errors->has('firstname') ? ' is-invalid' : '' }}" type="text" name="firstname" value="{{ old('firstname') }}">
                 @if ($errors->has('firstname'))
                     @foreach ($errors->get('firstname') as $error)
@@ -22,7 +22,7 @@
                 @endif
             </div>
             <div class="form-group">
-                <label>lastname</label>
+                <label>Vezetéknév</label>
                 <input class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" type="text" name="lastname" value="{{ old('lastname') }}">
                 @if ($errors->has('lastname'))
                     @foreach ($errors->get('lastname') as $error)
@@ -31,7 +31,7 @@
                 @endif
             </div>
             <div class="form-group">
-                <label>email</label>
+                <label>Email</label>
                 <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" name="email" value="{{ old('email') }}">
                 @if ($errors->has('email'))
                     @foreach ($errors->get('email') as $error)
@@ -40,7 +40,7 @@
                 @endif
             </div>
             <div class="form-group">
-                <label>password</label>
+                <label>Jelszó</label>
                 <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" type="password" name="password">
                 @if ($errors->has('password'))
                     @foreach ($errors->get('password') as $error)
@@ -49,44 +49,45 @@
                 @endif
             </div>
             <div class="form-group">
-                <label>password confirmation</label>
+                <label>Jelszó megerősítése</label>
                 <input class="form-control" type="password" name="password_confirmation">
             </div>
+            <hr>
 
             <div class="form-group">
-                <label>Irányító szám</label>
-                <input class="form-control" type="text" name="address[irszam]">
+                <label>Irányítószám</label>
+                <input class="form-control" type="text" name="address[irszam]" value="{{ old('address[irszam]') }}">
             </div>
 
             <div class="form-group">
                 <label>Város</label>
-                <input class="form-control" type="text" name="address[varos]">
+                <input class="form-control" type="text" name="address[varos]" value="{{ old('address[varos]') }}">
             </div>
 
             <div class="form-group">
                 <label>Utca</label>
-                <input class="form-control" type="text" name="address[utca]">
+                <input class="form-control" type="text" name="address[utca]" value="{{ old('address[utca]') }}">
             </div>
 
             <div class="form-group">
                 <label>Házszám</label>
-                <input class="form-control" type="text" name="address[hazszam]">
+                <input class="form-control" type="text" name="address[hazszam]" value="{{ old('address[hazszam]') }}">
             </div>
 
             <div class="form-group">
                 <label>Emelet</label>
-                <input class="form-control" type="text" name="address[emelet]">
+                <input class="form-control" type="text" name="address[emelet]" value="{{ old('address[emelet]') }}">
             </div>
 
             <div class="form-group">
                 <label>Ajtó szám</label>
-                <input class="form-control" type="text" name="address[ajtoszam]">
+                <input class="form-control" type="text" name="address[ajtoszam]" value="{{ old('address[ajtoszam]') }}">
             </div>
             
 
             
             <div class="form-group text-right">
-                <input class="btn btn-primary" type="submit" value="register">
+                <input class="btn btn-primary" type="submit" value="Regisztrálás">
             </div>
         </form>
     </div>

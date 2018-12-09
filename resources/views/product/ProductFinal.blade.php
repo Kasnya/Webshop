@@ -4,15 +4,15 @@
 <p>Szálítási adatok:</p>
 <table class="table  ">
   <tr>
-    <th>Vezeték név</th>
+    <th>Vezetéknév</th>
     <td>{{ Auth::user()->vez_nev}} </td>
   </tr>
   <tr>
-    <th>Kereszt név</th>
+    <th>Keresztnév</th>
     <td>{{ Auth::user()->ker_nev}} </td>
   </tr>
   <tr>
-    <th>Vásos</th>
+    <th>Város</th>
     <td>{{Auth::user()->cimek->varos }}</td>
   </tr>
   <tr>

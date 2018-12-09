@@ -12,11 +12,18 @@ class kategoriak_seeder extends Seeder
     public function run()
     {
         DB::table('kategoriak')->insert([
-            "kat_nev" => "Teszt kategória 1"
+            "kat_nev" => "Mobil"
         ]);
 
         DB::table('kategoriak')->insert([
-            "kat_nev" => "Teszt kategória 2"
+            "kat_nev" => "Egér"
+        ]);
+        DB::table('kategoriak')->insert([
+            "kat_nev" => "Billentyűzet"
+        ]);
+        
+        DB::table('kategoriak')->insert([
+            "kat_nev" => "Monitor"
         ]);
     }
 }
