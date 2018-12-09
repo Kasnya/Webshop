@@ -7,7 +7,7 @@
     <thead> 
         <tr>
             <th>Név</th>
-            <th>Egység ár</th>
+            <th>Egységár</th>
             <th class="text-center">Darabszám</th>
             <th class="text-center">Ár</th>
             <th class="text-center" >Törlés</th>
@@ -26,7 +26,7 @@
             </tr>
         @empty
             <tr>
-                <td colspan="5">A kosár tartalam üres</td>
+                <td colspan="5">A kosár üres!</td>
             </tr>
         @endforelse
         <tr>
@@ -36,5 +36,5 @@
     </tbody>
 </table>
 
-<a class="btn btn-primary float-right " href="{{route('final')}}">Véglegesítés </a>
+<a class="btn btn-primary float-right " href="{{route('final')}}">Rendelés leadása </a>
 @stop

@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('content')
-<p>Szálítási adatok:</p>
+<p>Szállítási adatok:</p>
 <table class="table  ">
   <tr>
     <th>Vezetéknév</th>
@@ -33,7 +33,7 @@
   @endif
   @if (Auth::user()->cimek->ajtoszam!=NULL)
   <tr>
-    <th>Ajtó szám</th>
+    <th>Ajtószám</th>
     <td>{{Auth::user()->cimek->ajtoszam }}</td>
   </tr>
   
@@ -48,7 +48,7 @@
         <tr>
         
             <th>Név</th>
-            <th>Egység ár</th>
+            <th>Egységár</th>
             <th class="text-center">Darabszám</th>
             <th class="text-right">Ár</th>
             

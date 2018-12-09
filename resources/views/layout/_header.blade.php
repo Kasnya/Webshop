@@ -7,13 +7,12 @@
                     <a class="nav-link" href="{{ route('home') }}">Főoldal</a>
                 </li>
             @auth
+            <li class="nav-item">
+                <span class="navbar-brand" > {{ Auth::user()->vez_nev}} {{ Auth::user()->ker_nev }}</span>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('logout') }}">Kijelentkezés</a>
                 </li>
-                <li class="nav-item">
-                <span class="navbar-brand" > {{ Auth::user()->vez_nev}} {{ Auth::user()->ker_nev }}</span>
-                </li>
-
                 <li class="nav-item">
                         <a class="nav-link" href="{{ route('cart.index') }}">Kosár({{Cart::count()}})</a>
                     </li>
