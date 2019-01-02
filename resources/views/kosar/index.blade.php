@@ -24,7 +24,7 @@
                 <td class="text-center" >{{ $termek->qty }}</td>
                 <td class="text-center">{{ round(($termek->price + $termek->tax) * $termek->qty) }} HUF</td>
              
-             <td class="text-center" ><a  href="{{route('cart.sorclear','Cart::get($termek->rowId)')}}">x</a></td>
+             <td class="text-center" ><a  href="{{route('cart.sorclear',['sor' => $termek->rowId])}}">x</a></td>
             </tr>
         @empty
             <tr>

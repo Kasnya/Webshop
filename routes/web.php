@@ -19,8 +19,7 @@ Route::get('/signup', 'Auth\RegisterController@showRegistrationForm')->name('reg
 Route::post('/signup', 'Auth\RegisterController@register');
 Route::get('/category', 'Controller@category')->name('category');
 Route::get('/signout', 'Auth\LoginController@logout')->name('logout');
-Route::get('/kosarba/{termek}/{db}','CartController@add')->name('cart.add');
-Route::get('/kosarba/{termek}','CartController@addd')->name('cart.addd');
+Route::post('/kosarba/{termek}','CartController@add')->name('cart.add');
 Route::get('/kosar','CartController@index')->name('cart.index');
 Route::get('/kosar-urites','CartController@clear')->name('cart.clear');
 Route::get('/termekek','ProductController@list_all');
